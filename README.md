@@ -2,9 +2,9 @@
 
 AMP (Accelerated Mobile Pages) adalah halaman web yang di desain khusus agar laman tersebut mobile friendly.
 
-![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/a.png)
-![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/b.png)
-![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/c.png)
+![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/a.jpg)
+![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/b.jpg)
+![alt text](https://github.com/nino-t/Accelerated-Mobile-Pages/blob/master/demo/c.jpg)
 
 
 ### Todo
