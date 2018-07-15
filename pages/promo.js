@@ -30,8 +30,8 @@ export default class Promo extends React.Component {
         <HeadHtml 
           title="Matahari Mall"
           subTitle="Promo" />
-        <iframe src={this.state.url}></iframe>
-        </MainLayout>
+          <iframe frameborder="0" height="100%" scrolling="no" src={this.state.url} width="100%"></iframe>
+      </MainLayout>
 		)
 	}
 }
