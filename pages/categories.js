@@ -9,7 +9,8 @@ export default class Categories extends React.Component {
     super(props);
   
     this.state = {
-      categories: {}
+      categories: [],
+      isLoading: true
     }
   }
   
@@ -18,7 +19,8 @@ export default class Categories extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({
-          categories: data.data
+          categories: data.data,
+          isLoading: false
         });
       })
       .catch((error) => {
@@ -36,7 +38,7 @@ export default class Categories extends React.Component {
 
         <div style={{ padding: '8px' }} className="wrap-categories">
           {
-            (categories.length > 0) &&
+            (categories.length > 0)?
               categories.map((category, index) => (
                 <Link href="/" key={index}>
                   <a>
@@ -47,6 +49,19 @@ export default class Categories extends React.Component {
                     </div>
                   </a>
                 </Link>
+              ))
+              :
+              Array.from(Array(6).keys()).map((item, index) => (
+                <div style={{ background: '#ecf0f1', height: '120px', display:'flex', alignItems:'center', marginBottom: '8px', borderRadius: '3px', backgroundSize: 'cover', padding: '8px 12px' }}>
+                  <div style={{ flex: '70%', display:'flex', alignItems:'left', justifyContent:'center',flexDirection:'column'}}>
+                    <div style={{ background: '#bdc3c7',marginBottom:'5px', width: '40%', height: '10px', borderRadius: '4px'}}></div>
+                    <div style={{ background: '#bdc3c7',marginBottom:'5px', width: '70%', height: '10px', borderRadius: '4px'}}></div>
+                    <div style={{ background: '#bdc3c7',marginBottom:'5px', width: '70%', height: '10px', borderRadius: '4px'}}></div>
+                  </div>
+                  <div style={{ flex: '30%' }}>
+                    <div style={{ background: '#bdc3c7', width: '100%', height: '90px', borderRadius: '4px'}}></div>
+                  </div>
+                </div>
               ))
           }
         </div>
